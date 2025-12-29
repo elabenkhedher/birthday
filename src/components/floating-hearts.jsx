@@ -8,7 +8,6 @@ export default function FloatingHearts() {
   const [hearts, setHearts] = useState([])
 
   useEffect(() => {
-    // Generate floating hearts
     const colors = [
       "text-pink-500",
       "text-pink-400",

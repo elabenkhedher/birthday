@@ -72,7 +72,6 @@ export default function BirthdayCelebration() {
             </div>
           </div>
 
-          {/* Card content */}
           <AnimatePresence>
             {isCardOpen && <motion.div
               className="absolute inset-0 bg-white max-[350px]:-top-6 max-[350px]:min-h-[275px] rounded-3xl p-4 shadow-xl shadow-rose-100 flex flex-col items-center justify-center"

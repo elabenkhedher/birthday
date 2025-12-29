@@ -104,7 +104,6 @@ function Loader() {
           Loading something special...
         </motion.p>
 
-        {/* Cute emojis */}
         <div className="flex justify-center space-x-4 mt-5">
           {["🎂", "✨", "🎁", "💖", "🎈"].map((emoji, i) => (
             <motion.span

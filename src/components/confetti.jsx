@@ -7,7 +7,6 @@ export default function Confetti() {
   const [confetti, setConfetti] = useState([])
 
   useEffect(() => {
-    // Generate confetti pieces
     const colors = [
       "bg-rose-500",
       "bg-purple-500",
