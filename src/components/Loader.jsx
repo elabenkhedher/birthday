@@ -5,7 +5,6 @@ import { Heart, Sparkles, Star } from "lucide-react"
 function Loader() {
   const [randomPositions, setRandomPositions] = useState([]);
 
-  // Only run the random position generation after the component mounts
   useEffect(() => {
     const positions = Array.from({ length: 20 }).map(() => ({
       x: Math.random() * 100,
@@ -15,7 +14,6 @@ function Loader() {
   }, []);
   return (
     <div className="flex items-center justify-center min-h-screen bg-gradient-to-b from-rose-100 to-purple-100 overflow-hidden">
-      {/* Floating background hearts */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         {randomPositions.map((position, i) => (
           <motion.div
@@ -61,14 +59,12 @@ function Loader() {
         ))}
       </div>
 
-      {/* Main loading card */}
       <motion.div
         className="relative z-10 bg-white bg-opacity-80 backdrop-blur-sm rounded-3xl shadow-lg shadow-rose-100 p-8 border-4 border-pink-200 flex flex-col items-center max-w-xs mx-auto"
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        {/* Bouncing hearts */}
         <div className="flex justify-center space-x-3 mb-5">
           {Array.from({ length: 3 }).map((_, i) => (
             <motion.div
@@ -83,7 +79,7 @@ function Loader() {
                 delay: i * 0.2,
               }}
             >
-              <Heart
+              <Star
                 className={`w-8 h-8 ${i === 0
                   ? "text-pink-400 fill-pink-200"
                   : i === 1
